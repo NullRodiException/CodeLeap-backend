@@ -39,7 +39,9 @@ class FirebaseAuthentication(authentication.BaseAuthentication):
             if created:
                 if 'email' in decoded_token:
                     user.email = decoded_token['email']
-                    user.save()
+                if 'name' in decoded_token:
+                    user.first_name = decoded_token['name']
+                user.save()
 
             return user, None
 
