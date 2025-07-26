@@ -6,10 +6,11 @@ from django.contrib.auth.models import User
 from django.conf import settings
 
 try:
-    cred = credentials.ApplicationDefault()
-    firebase_admin.initialize_app(cred, {
-        'projectId': settings.FIREBASE_PROJECT_ID,
-    })
+    if not firebase_admin._apps:
+        cred = credentials.ApplicationDefault()
+        firebase_admin.initialize_app(cred, {
+            'projectId': settings.FIREBASE_PROJECT_ID,
+        })
 except Exception as e:
     print(f"Firebase Admin SDK Error: {e}")
     print("Certifique-se de que a autenticação do Google Cloud está configurada ou use uma chave de serviço.")

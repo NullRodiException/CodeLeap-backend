@@ -130,3 +130,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 cred = credentials.Certificate("firebase/credentials.json")
 firebase_admin.initialize_app(cred)
 
+FIREBASE_PROJECT_ID = "seu-project-id-aqui"
