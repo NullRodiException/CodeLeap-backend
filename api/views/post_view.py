@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from api.authentication import FirebaseAuthentication
 from api.models import Post
 from api.models.like_model import Like
+from api.pagination import StandardCursorPagination
 from api.permissions import IsAuthorOrReadOnly
 from api.serializers import PostSerializer
 
@@ -13,6 +14,7 @@ class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
     authentication_classes = [FirebaseAuthentication]
     permission_classes = [IsAuthenticated & IsAuthorOrReadOnly]
+    pagination_class = StandardCursorPagination
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
