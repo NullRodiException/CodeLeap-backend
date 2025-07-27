@@ -7,6 +7,7 @@ class Comment(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
     created_datetime = models.DateTimeField(auto_now_add=True)
+    mentions = models.ManyToManyField(User, related_name='mentioned_in_comments', blank=True)
 
     class Meta:
         ordering = ['created_datetime']
