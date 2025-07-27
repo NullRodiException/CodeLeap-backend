@@ -1,6 +1,6 @@
 /.venv/
 /.idea/
-/firebase/credentials.json
+/credentials.json
 /db.sqlite3
 .env
 docker-compose.yml

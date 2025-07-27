@@ -129,7 +129,7 @@ if not firebase_admin._apps:
         creds_dict = json.loads(firebase_creds_json)
         cred = credentials.Certificate(creds_dict)
     else:
-        cred_path = os.path.join(BASE_DIR, 'firebase', 'credentials.json')
+        cred_path = os.path.join(BASE_DIR, 'credentials.json')
         cred = credentials.Certificate(cred_path)
 
     firebase_admin.initialize_app(cred)
@@ -137,3 +137,4 @@ if not firebase_admin._apps:
 FIREBASE_PROJECT_ID = os.environ.get("FIREBASE_PROJECT_ID", "codeleap-backend-c12df")
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
