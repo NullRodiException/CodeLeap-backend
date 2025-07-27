@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 
-from .models import Post, Comment, Like
+from .models import Post, Comment, LikeModel
 from .permissions import IsAuthorOrReadOnly
 from .serializers import PostSerializer, CommentSerializer, UserProfileSerializer
 from .authentication import FirebaseAuthentication
@@ -49,9 +49,9 @@ class PostViewSet(viewsets.ModelViewSet):
         user = request.user
 
         try:
-            like = Like.objects.get(post=post, user=user)
+            like = LikeModel.objects.get(post=post, user=user)
             like.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
-        except Like.DoesNotExist:
-            Like.objects.create(post=post, user=user)
+        except LikeModel.DoesNotExist:
+            LikeModel.objects.create(post=post, user=user)
             return Response(status=status.HTTP_201_CREATED)
