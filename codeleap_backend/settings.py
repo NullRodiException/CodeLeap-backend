@@ -9,28 +9,32 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import json
+import os
 from pathlib import Path
+
+import dj_database_url
 import firebase_admin
+from dotenv import load_dotenv
 from firebase_admin import credentials
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
+SECRET_KEY = os.environ.get(
+    'SECRET_KEY',
+    'django-insecure-g(m8pq7(ay70wtuiuq9az=tomc%48rkf=#)sc=zt$))ot0^w50'
+)
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-g(m8pq7(ay70wtuiuq9az=tomc%48rkf=#)sc=zt$))ot0^w50'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ
 
 ALLOWED_HOSTS = []
 
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -73,20 +77,24 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'codeleap_backend.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.config(
+            conn_max_age=600,
+            ssl_require=True
+        )
     }
-}
-
-
-# Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ.get('POSTGRES_DB'),
+            'USER': os.environ.get('POSTGRES_USER'),
+            'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+            'HOST': os.environ.get('POSTGRES_HOST'),
+            'PORT': os.environ.get('POSTGRES_PORT'),
+        }
+    }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -103,10 +111,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -115,19 +119,21 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
-
 STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Initialize Firebase Admin SDK
-cred = credentials.Certificate("firebase/credentials.json")
-firebase_admin.initialize_app(cred)
+if not firebase_admin._apps:
+    firebase_creds_json = os.environ.get('FIREBASE_CREDS_JSON')
+    if firebase_creds_json:
+        creds_dict = json.loads(firebase_creds_json)
+        cred = credentials.Certificate(creds_dict)
+    else:
+        cred_path = os.path.join(BASE_DIR, 'firebase', 'credentials.json')
+        cred = credentials.Certificate(cred_path)
 
-FIREBASE_PROJECT_ID = "seu-project-id-aqui"
+    firebase_admin.initialize_app(cred)
+
+FIREBASE_PROJECT_ID = os.environ.get("FIREBASE_PROJECT_ID", "codeleap-backend-c12df")
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
