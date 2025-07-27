@@ -5,6 +5,8 @@ from rest_framework import exceptions
 from django.contrib.auth.models import User
 from django.conf import settings
 
+from api.models import UserProfile
+
 try:
     if not firebase_admin._apps:
         cred = credentials.ApplicationDefault()
@@ -43,6 +45,7 @@ class FirebaseAuthentication(authentication.BaseAuthentication):
                 if 'name' in decoded_token:
                     user.first_name = decoded_token['name']
                 user.save()
+                UserProfile.objects.create(user=user)
 
             return user, None
 
