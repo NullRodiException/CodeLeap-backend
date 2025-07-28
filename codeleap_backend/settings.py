@@ -46,12 +46,14 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'api',
-    'django_filters'
+    'corsheaders',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -138,4 +140,6 @@ if not firebase_admin._apps:
 FIREBASE_PROJECT_ID = os.environ.get("FIREBASE_PROJECT_ID", "codeleap-backend-c12df")
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+CORS_ALLOW_ALL_ORIGINS = True
 
