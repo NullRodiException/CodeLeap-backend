@@ -40,9 +40,9 @@ GET /careers/
 
 |Name|Location|Type|Required|Description|
 |---|---|---|---|---|
-|author|query|integer| yes |filters posts from a author with id|
-|cursor|query|string| yes |comes from pagination on the bopdy of the response (next and previous)|
-|ordering|query|string| yes |filter ordering (-comments_count, comments_count, -likes_count, likes_count, created_datetime, -created_datetime)|
+|author|query|integer| no |filters posts from a author with id|
+|cursor|query|string| no |comes from pagination on the bopdy of the response (next and previous)|
+|ordering|query|string| no |filter ordering (-comments_count, comments_count, -likes_count, likes_count, created_datetime, -created_datetime)|
 
 > Response Examples
 
@@ -157,9 +157,9 @@ GET /careers/{postId}/
 |Name|Location|Type|Required|Title|Description|
 |---|---|---|---|---|---|
 |postId|path|integer| yes ||Id from the Post|
-|author|query|string| yes ||filters posts from a author with id|
-|cursor|query|string| yes ||comes from pagination on the bopdy of the response (next and previous)|
-|ordering|query|string| yes ||filter ordering ( created_datetime, -created_datetime)|
+|author|query|string| no ||filters posts from a author with id|
+|cursor|query|string| no ||comes from pagination on the bopdy of the response (next and previous)|
+|ordering|query|string| no ||filter ordering ( created_datetime, -created_datetime)|
 
 > Response Examples
 
@@ -225,8 +225,8 @@ PATCH /careers/{postID}/
 |postID|path|string| yes ||none|
 |Authorization|header|string| no ||none|
 |body|body|object| no ||none|
-|» title|body|string| yes ||none|
-|» content|body|string| yes ||none|
+|» title|body|string| no ||none|
+|» content|body|string| no ||none|
 
 > Response Examples
 
@@ -343,7 +343,7 @@ GET /careers/{postId}/comments/
 |Name|Location|Type|Required|Title|Description|
 |---|---|---|---|---|---|
 |postId|path|string| yes ||none|
-|cursor|query|string| yes ||none|
+|cursor|query|string| no ||none|
 
 > Response Examples
 
@@ -591,7 +591,7 @@ PATCH /careers/{postId}/comments/{commentId}/
 |commentId|path|string| yes ||none|
 |Authorization|header|string| yes ||none|
 |body|body|object| no ||none|
-|» content|body|string| yes ||none|
+|» content|body|string| no ||none|
 
 > Response Examples
 

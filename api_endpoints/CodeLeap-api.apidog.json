@@ -130,7 +130,7 @@
                         {
                           "id": "DfjSYkQQP5",
                           "name": "cursor",
-                          "required": true,
+                          "required": false,
                           "description": "",
                           "example": "",
                           "type": "string",
@@ -813,9 +813,6 @@
                             "type": "string"
                           }
                         },
-                        "required": [
-                          "content"
-                        ],
                         "x-apidog-orders": [
                           "content"
                         ]
@@ -1487,7 +1484,7 @@
                     {
                       "id": "pLGQF4QsaS",
                       "name": "author",
-                      "required": true,
+                      "required": false,
                       "description": "filters posts from a author with id",
                       "example": "",
                       "type": "integer",
@@ -1500,7 +1497,7 @@
                     {
                       "id": "NMaRgKGrra",
                       "name": "cursor",
-                      "required": true,
+                      "required": false,
                       "description": "comes from pagination on the bopdy of the response (next and previous)",
                       "example": "",
                       "type": "string",
@@ -1510,7 +1507,7 @@
                     {
                       "id": "pWclxF8OTt",
                       "name": "ordering",
-                      "required": true,
+                      "required": false,
                       "description": "filter ordering (-comments_count, comments_count, -likes_count, likes_count, created_datetime, -created_datetime)",
                       "example": "-comments_count",
                       "type": "string",
@@ -1606,7 +1603,7 @@
                     {
                       "id": "GfvXmznHrE",
                       "name": "author",
-                      "required": true,
+                      "required": false,
                       "description": "filters posts from a author with id",
                       "type": "string",
                       "enable": true
@@ -1614,7 +1611,7 @@
                     {
                       "id": "xBz2vC6MSQ",
                       "name": "cursor",
-                      "required": true,
+                      "required": false,
                       "description": "comes from pagination on the bopdy of the response (next and previous)",
                       "type": "string",
                       "enable": true
@@ -1622,7 +1619,7 @@
                     {
                       "id": "xURs6vtQ3w",
                       "name": "ordering",
-                      "required": true,
+                      "required": false,
                       "description": "filter ordering ( created_datetime, -created_datetime)",
                       "type": "string",
                       "enable": true
@@ -2153,10 +2150,6 @@
                         "type": "string"
                       }
                     },
-                    "required": [
-                      "title",
-                      "content"
-                    ],
                     "x-apidog-orders": [
                       "title",
                       "content"

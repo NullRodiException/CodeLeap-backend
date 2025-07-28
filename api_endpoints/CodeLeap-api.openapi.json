@@ -28,7 +28,7 @@
             "name": "cursor",
             "in": "query",
             "description": "",
-            "required": true,
+            "required": false,
             "example": "",
             "schema": {
               "type": "string"
@@ -426,10 +426,7 @@
                   "content": {
                     "type": "string"
                   }
-                },
-                "required": [
-                  "content"
-                ]
+                }
               },
               "example": {
                 "content": "this is a comment"
@@ -868,7 +865,7 @@
             "name": "author",
             "in": "query",
             "description": "filters posts from a author with id",
-            "required": true,
+            "required": false,
             "example": 0,
             "schema": {
               "type": "integer"
@@ -878,7 +875,7 @@
             "name": "cursor",
             "in": "query",
             "description": "comes from pagination on the bopdy of the response (next and previous)",
-            "required": true,
+            "required": false,
             "example": "",
             "schema": {
               "type": "string"
@@ -888,7 +885,7 @@
             "name": "ordering",
             "in": "query",
             "description": "filter ordering (-comments_count, comments_count, -likes_count, likes_count, created_datetime, -created_datetime)",
-            "required": true,
+            "required": false,
             "example": "-comments_count",
             "schema": {
               "type": "string"
@@ -1094,7 +1091,7 @@
             "name": "author",
             "in": "query",
             "description": "filters posts from a author with id",
-            "required": true,
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -1103,7 +1100,7 @@
             "name": "cursor",
             "in": "query",
             "description": "comes from pagination on the bopdy of the response (next and previous)",
-            "required": true,
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -1112,7 +1109,7 @@
             "name": "ordering",
             "in": "query",
             "description": "filter ordering ( created_datetime, -created_datetime)",
-            "required": true,
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -1231,11 +1228,7 @@
                   "content": {
                     "type": "string"
                   }
-                },
-                "required": [
-                  "title",
-                  "content"
-                ]
+                }
               },
               "example": {
                 "title": "test update",
