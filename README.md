@@ -21,6 +21,8 @@ generator: "@tarslib/widdershins v4.0.30"
 
 # CodeLeap-api
 
+Inside `api_endpoints` folder you can find the API endpoints for the CodeLeap project. This API is designed to handle career posts, comments, likes, and user profiles.
+
 ### Base URLs:
 - `https://codeleap-front.onrender.com/` Frontend URL for generating firebase token
 - `https://codeleap-backend-qog7.onrender.com/` Backend URL for API requests
