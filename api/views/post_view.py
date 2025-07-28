@@ -1,6 +1,6 @@
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from api.authentication import FirebaseAuthentication
 from api.models import Post
@@ -13,8 +13,14 @@ class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all().order_by('-created_datetime')
     serializer_class = PostSerializer
     authentication_classes = [FirebaseAuthentication]
-    permission_classes = [IsAuthenticated & IsAuthorOrReadOnly]
     pagination_class = StandardCursorPagination
+
+    def get_permissions(self):
+        if self.action in ['list', 'retrieve']:
+            permission_classes = [AllowAny]
+        else:
+            permission_classes = [IsAuthenticated & IsAuthorOrReadOnly]
+        return [permission() for permission in permission_classes]
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)

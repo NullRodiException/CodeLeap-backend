@@ -6,7 +6,7 @@ from .views import PostViewSet, CommentViewSet, UserProfileView
 router = DefaultRouter()
 router.register(r'', PostViewSet, basename='post')
 posts_router = routers.NestedDefaultRouter(router, r'', lookup='post')
-posts_router.register(r'comments/', CommentViewSet, basename='post-comments')
+posts_router.register(r'comments', CommentViewSet, basename='post-comments')
 urlpatterns = [
     path('profile/', UserProfileView.as_view(), name='user-profile'),
     path('', include(router.urls)),
