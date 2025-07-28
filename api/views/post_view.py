@@ -1,4 +1,6 @@
-from rest_framework import viewsets, status
+from django.db.models import Count
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import viewsets, status, filters
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
@@ -14,6 +16,17 @@ class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
     authentication_classes = [FirebaseAuthentication]
     pagination_class = StandardCursorPagination
+
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    filterset_fields = ['author']
+    ordering_fields = ['created_datetime', 'likes_count', 'comments_count']
+    ordering = ['-created_datetime']
+
+    def get_queryset(self):
+        return Post.objects.annotate(
+            likes_count = Count('likes', distinct=True),
+            comments_count = Count('comments', distinct=True)
+        )
 
     def get_permissions(self):
         if self.action in ['list', 'retrieve']:
