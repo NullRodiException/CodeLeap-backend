@@ -8,6 +8,7 @@ charset-normalizer==3.4.2
 cryptography==45.0.5
 dj-database-url==3.0.1
 Django==5.2.4
+django-filter==25.1
 djangorestframework==3.16.0
 drf-nested-routers==0.94.2
 firebase_admin==7.0.0
