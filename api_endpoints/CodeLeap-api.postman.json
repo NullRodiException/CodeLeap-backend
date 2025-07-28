@@ -1,0 +1,707 @@
+{
+    "info": {
+        "name": "CodeLeap-api",
+        "description": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Career",
+            "description": "",
+            "item": [
+                {
+                    "name": "Comment",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "Comments",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "GET",
+                                "body": {},
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/careers/:postId/comments/",
+                                    "path": [
+                                        "careers",
+                                        ":postId",
+                                        "comments"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "cursor",
+                                            "value": "",
+                                            "description": "",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "postId",
+                                            "value": "3",
+                                            "description": "",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "Comment",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "GET",
+                                "body": {},
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLQ2I5VjBNMVBFN2VUZVpXT3YxRVBtMWpGWkNfaFgyQ256YXhHNTNYS3N6WFRRWlE9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1ZCI6ImNvZGVsZWFwLWJhY2tlbmQtYzEyZGYiLCJhdXRoX3RpbWUiOjE3NTM2NjExOTgsInVzZXJfaWQiOiJFSUtDRGdVZ1dTWmVyZ2wxbFlZbnlyT2lvVFcyIiwic3ViIjoiRUlLQ0RnVWdXU1plcmdsMWxZWW55ck9pb1RXMiIsImlhdCI6MTc1MzY2MTE5OCwiZXhwIjoxNzUzNjY0Nzk4LCJlbWFpbCI6InJvZHJpZ28uc2lsdmEub2xpdmVpcmE5MzVAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTc2NDY0Mjk0Njk1ODc5ODc4NTUiXSwiZW1haWwiOlsicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTkzNUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.Kk1uQPlbjVxze_zmCsRfE8SNQptnIyq0C0rIee5BHeDUQ8_WrHj3UWOdIFoI8_aCMPEM9uW3gIv4rV7UBEyRhcHVHbdTIemr-k8YKvxVcKxhTLFfEwUIQMZ7m01laahyYuKfRNsl0VocAx2GOkZ4lUDav9T4DwCmgPz55HFeDoEZpL4uHyZTLTUJcRJCKVBIK03QoFbSKJsXOPmk0t7kRIEPqoqwylk7iRwJjMemVt4dN2W22hCnnjWktMxyEouQqzOQdIUGPtIK9fzAeGK5_iMNV4WtmfUOEr4wqjizwW_mnWgh1QwQWYsQmyRPPNyPccdStwZ_lJnLF6HexpAS2Q",
+                                        "description": "",
+                                        "type": "string"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/careers/:postId/comments/:commentId/",
+                                    "path": [
+                                        "careers",
+                                        ":postId",
+                                        "comments",
+                                        ":commentId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "postId",
+                                            "value": "3",
+                                            "description": "",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "key": "commentId",
+                                            "description": "",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "Comment",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "POST",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"content\": \"this is a good comment @rodrigo_123\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzY1NjM0MiwidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNjU2MzQyLCJleHAiOjE3NTM2NTk5NDIsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.E7c-9buFzOKBNTbN5hIg1wU6pVFM9jEO90WO01OV4fjdGtzShVr42yWlI4EYK5oyahYHWTpMVs54sZ8k-FfjAEB6Mp3VBoS3ooPcJsg7_N6QQyim5vc_zKrN0MHQnuDZNRyTkaC4aKVtRyvA9gXf0S8Jw7MpBT-x1qDrMs35_PkKeQOG0isposVAKYCQCqwHmOtwIMt5LaWewtpmH1mvBsHQst4NeMbr6YpxDhG-SXt1G1YY7UKNJyHNAwlh-P6g5BIhyfKEwPAHgkuvWt2ywK2T5GBXW_UoU4rbAhO8feqJkIozRMrxWyuvSpSG3-n_uHnItlVxKklNoYuJ15v5gg",
+                                        "description": "",
+                                        "type": "string"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/careers/:postId/comments/",
+                                    "path": [
+                                        "careers",
+                                        ":postId",
+                                        "comments"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "postId",
+                                            "description": "",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "Comment",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "PATCH",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"content\": \"this is a comment\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzY1NjM0MiwidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNjU2MzQyLCJleHAiOjE3NTM2NTk5NDIsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.E7c-9buFzOKBNTbN5hIg1wU6pVFM9jEO90WO01OV4fjdGtzShVr42yWlI4EYK5oyahYHWTpMVs54sZ8k-FfjAEB6Mp3VBoS3ooPcJsg7_N6QQyim5vc_zKrN0MHQnuDZNRyTkaC4aKVtRyvA9gXf0S8Jw7MpBT-x1qDrMs35_PkKeQOG0isposVAKYCQCqwHmOtwIMt5LaWewtpmH1mvBsHQst4NeMbr6YpxDhG-SXt1G1YY7UKNJyHNAwlh-P6g5BIhyfKEwPAHgkuvWt2ywK2T5GBXW_UoU4rbAhO8feqJkIozRMrxWyuvSpSG3-n_uHnItlVxKklNoYuJ15v5gg",
+                                        "description": "",
+                                        "type": "string"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/careers/:postId/comments/:commentId/",
+                                    "path": [
+                                        "careers",
+                                        ":postId",
+                                        "comments",
+                                        ":commentId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "postId",
+                                            "value": "3",
+                                            "description": "",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "key": "commentId",
+                                            "value": "2",
+                                            "description": "",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "Comment",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "DELETE",
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzY1NjM0MiwidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNjU2MzQyLCJleHAiOjE3NTM2NTk5NDIsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.E7c-9buFzOKBNTbN5hIg1wU6pVFM9jEO90WO01OV4fjdGtzShVr42yWlI4EYK5oyahYHWTpMVs54sZ8k-FfjAEB6Mp3VBoS3ooPcJsg7_N6QQyim5vc_zKrN0MHQnuDZNRyTkaC4aKVtRyvA9gXf0S8Jw7MpBT-x1qDrMs35_PkKeQOG0isposVAKYCQCqwHmOtwIMt5LaWewtpmH1mvBsHQst4NeMbr6YpxDhG-SXt1G1YY7UKNJyHNAwlh-P6g5BIhyfKEwPAHgkuvWt2ywK2T5GBXW_UoU4rbAhO8feqJkIozRMrxWyuvSpSG3-n_uHnItlVxKklNoYuJ15v5gg",
+                                        "description": "",
+                                        "type": "string"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/careers/:postId/comments/:commentId/",
+                                    "path": [
+                                        "careers",
+                                        ":postId",
+                                        "comments",
+                                        ":commentId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "postId",
+                                            "value": "3",
+                                            "description": "",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "key": "commentId",
+                                            "value": "2",
+                                            "description": "",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        }
+                    ],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        },
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "auth": {}
+                },
+                {
+                    "name": "Like",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "Like-a-post",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {
+                                    "type": "noauth",
+                                    "noauth": []
+                                },
+                                "method": "POST",
+                                "body": {},
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "",
+                                        "description": "",
+                                        "type": "string"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/careers/:postId/like/",
+                                    "path": [
+                                        "careers",
+                                        ":postId",
+                                        "like"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "postId",
+                                            "description": "",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        }
+                    ],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        },
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "auth": {}
+                },
+                {
+                    "name": "Profile",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "Profile",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "PATCH",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"app_username\": \"rodrigo_123\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLQ2I5VjBNMVBFN2VUZVpXT3YxRVBtMWpGWkNfaFgyQ256YXhHNTNYS3N6WFRRWlE9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1ZCI6ImNvZGVsZWFwLWJhY2tlbmQtYzEyZGYiLCJhdXRoX3RpbWUiOjE3NTM2NjExOTgsInVzZXJfaWQiOiJFSUtDRGdVZ1dTWmVyZ2wxbFlZbnlyT2lvVFcyIiwic3ViIjoiRUlLQ0RnVWdXU1plcmdsMWxZWW55ck9pb1RXMiIsImlhdCI6MTc1MzY2MTE5OCwiZXhwIjoxNzUzNjY0Nzk4LCJlbWFpbCI6InJvZHJpZ28uc2lsdmEub2xpdmVpcmE5MzVAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTc2NDY0Mjk0Njk1ODc5ODc4NTUiXSwiZW1haWwiOlsicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTkzNUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.Kk1uQPlbjVxze_zmCsRfE8SNQptnIyq0C0rIee5BHeDUQ8_WrHj3UWOdIFoI8_aCMPEM9uW3gIv4rV7UBEyRhcHVHbdTIemr-k8YKvxVcKxhTLFfEwUIQMZ7m01laahyYuKfRNsl0VocAx2GOkZ4lUDav9T4DwCmgPz55HFeDoEZpL4uHyZTLTUJcRJCKVBIK03QoFbSKJsXOPmk0t7kRIEPqoqwylk7iRwJjMemVt4dN2W22hCnnjWktMxyEouQqzOQdIUGPtIK9fzAeGK5_iMNV4WtmfUOEr4wqjizwW_mnWgh1QwQWYsQmyRPPNyPccdStwZ_lJnLF6HexpAS2Q",
+                                        "description": "",
+                                        "type": "string"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/careers/profile/",
+                                    "path": [
+                                        "careers",
+                                        "profile"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        }
+                    ],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        },
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "auth": {}
+                },
+                {
+                    "name": "Posts",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "GET",
+                        "body": {},
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/careers/",
+                            "path": [
+                                "careers"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "key": "author",
+                                    "value": "",
+                                    "description": "filters posts from a author with id",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "cursor",
+                                    "value": "",
+                                    "description": "comes from pagination on the bopdy of the response (next and previous)",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "ordering",
+                                    "value": "-comments_count",
+                                    "description": "filter ordering (-comments_count, comments_count, -likes_count, likes_count, created_datetime, -created_datetime)",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": []
+                        }
+                    },
+                    "response": [],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                },
+                {
+                    "name": "Post",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "GET",
+                        "body": {},
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/careers/:postId/",
+                            "path": [
+                                "careers",
+                                ":postId"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "key": "author",
+                                    "description": "filters posts from a author with id",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "cursor",
+                                    "description": "comes from pagination on the bopdy of the response (next and previous)",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "ordering",
+                                    "description": "filter ordering ( created_datetime, -created_datetime)",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "postId",
+                                    "value": "3",
+                                    "description": "Id from the Post",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                },
+                {
+                    "name": "Post",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "POST",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"title\": \"test\",\r\n    \"content\": \"Mention to @Rodrigo_123654\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzY1MjQ1MywidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNjUyNDUzLCJleHAiOjE3NTM2NTYwNTMsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.E9E-r4DaQam2f4b_PhW7VHZB-cHnS-_GnXZywCsuhPiGuGwXORXorMjjl6YuZf0uHIP1Ou34F08fzmZ5ozpuCmLMVGwgCjUB7ZQC4PIWwCdmFDG-ynTyIc0JE3yYWJD925vCHkDb7T4ElUIzNQP3mzS8ceFMHLpkwri09Fq1hmTQ1YSwG7NAgM8kN17hsKJnSflypqT5dUvhUU2kiy3HQysz1HVos0QKjijQIyNz3py4EpSA-fzrcKmZ6NA_-MhMkc2vFtmcNVeNREnapF51ba_kFPMA5XARSvjSzYwFF2D898V94pJ6DFQF2VYL5rlwTo4DwLc2XM6vEum_9dAXeQ",
+                                "description": "Obteined from the basic front end",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/careers/",
+                            "path": [
+                                "careers"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        }
+                    },
+                    "response": [],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                },
+                {
+                    "name": "Post",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "PATCH",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"title\": \"test update\",\r\n    \"content\": \"contente update no mention\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzczNjA2OCwidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNzM2MDY4LCJleHAiOjE3NTM3Mzk2NjgsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.Z3K6q4IoDfEk-k17kQsKcLmKQ9SW8uQcrauF5yHIfro28VzZ7lKxnytvCb2MeoKMZVO31yYAZ8AXY5QAuDMXgRebXeB67ROs7pjgpgcO8bwOHrGPpexuCiQGgAq5qlCfxPp-m5dAG4FNzRDcvwTlh-hBLIhDDI0GPDdUP_ozcZHXumULOukBexJ04hYaM-yjG8q1xwLdNSE8TAzz7j9clC1nRXoCKmyWExrb90b1cn8Cr2axxg9D_gYzS5v6ZqvPiI8moCD4d1G12wNdn95HY4uqQX68PO2I32FCRRgLelibFAyjC5zCJSMya7OSIJTVuLgLmPS6NNYNrlqkkwQOwg",
+                                "description": "",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/careers/:postID/",
+                            "path": [
+                                "careers",
+                                ":postID"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "postID",
+                                    "value": "1",
+                                    "description": "",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                },
+                {
+                    "name": "Post",
+                    "description": "",
+                    "event": [],
+                    "auth": {},
+                    "request": {
+                        "auth": {},
+                        "method": "DELETE",
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzczNjA2OCwidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNzM2MDY4LCJleHAiOjE3NTM3Mzk2NjgsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.Z3K6q4IoDfEk-k17kQsKcLmKQ9SW8uQcrauF5yHIfro28VzZ7lKxnytvCb2MeoKMZVO31yYAZ8AXY5QAuDMXgRebXeB67ROs7pjgpgcO8bwOHrGPpexuCiQGgAq5qlCfxPp-m5dAG4FNzRDcvwTlh-hBLIhDDI0GPDdUP_ozcZHXumULOukBexJ04hYaM-yjG8q1xwLdNSE8TAzz7j9clC1nRXoCKmyWExrb90b1cn8Cr2axxg9D_gYzS5v6ZqvPiI8moCD4d1G12wNdn95HY4uqQX68PO2I32FCRRgLelibFAyjC5zCJSMya7OSIJTVuLgLmPS6NNYNrlqkkwQOwg",
+                                "description": "",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/careers/:postID/",
+                            "path": [
+                                "careers",
+                                ":postID"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "postID",
+                                    "value": "1",
+                                    "description": "",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "protocolProfileBehavior": {
+                        "strictSSL": false,
+                        "followRedirects": true
+                    }
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                }
+            ],
+            "auth": {}
+        }
+    ],
+    "variable": [],
+    "event": [],
+    "auth": {}
+}
