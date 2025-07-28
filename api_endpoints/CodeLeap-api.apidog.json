@@ -1,0 +1,2450 @@
+{
+  "apidogProject": "1.0.0",
+  "$schema": {
+    "app": "apidog",
+    "type": "project",
+    "version": "1.2.0"
+  },
+  "info": {
+    "name": "CodeLeap-api",
+    "description": "",
+    "mockRule": {
+      "rules": [],
+      "enableSystemRule": true
+    }
+  },
+  "apiCollection": [
+    {
+      "name": "Root",
+      "id": 4453589,
+      "auth": {},
+      "securityScheme": {},
+      "parentId": 0,
+      "serverId": "",
+      "description": "",
+      "identityPattern": {
+        "httpApi": {
+          "type": "methodAndPath",
+          "bodyType": "",
+          "fields": []
+        }
+      },
+      "shareSettings": {},
+      "visibility": "SHARED",
+      "moduleId": 832020,
+      "preProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "postProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "inheritPostProcessors": {},
+      "inheritPreProcessors": {},
+      "items": [
+        {
+          "name": "Career",
+          "id": 4453684,
+          "auth": {},
+          "securityScheme": {},
+          "parentId": 0,
+          "serverId": "",
+          "description": "",
+          "identityPattern": {
+            "httpApi": {
+              "type": "inherit",
+              "bodyType": "",
+              "fields": []
+            }
+          },
+          "shareSettings": {},
+          "visibility": "INHERITED",
+          "moduleId": 832020,
+          "preProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "postProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "inheritPostProcessors": {},
+          "inheritPreProcessors": {},
+          "items": [
+            {
+              "name": "Comment",
+              "id": 4453687,
+              "auth": {},
+              "securityScheme": {},
+              "parentId": 4453684,
+              "serverId": "",
+              "description": "",
+              "identityPattern": {
+                "httpApi": {
+                  "type": "inherit",
+                  "bodyType": "",
+                  "fields": []
+                }
+              },
+              "shareSettings": {},
+              "visibility": "INHERITED",
+              "moduleId": 832020,
+              "preProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "postProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "inheritPostProcessors": {},
+              "inheritPreProcessors": {},
+              "items": [
+                {
+                  "name": "Comments",
+                  "api": {
+                    "id": "19596190",
+                    "method": "get",
+                    "path": "/careers/{postId}/comments/",
+                    "parameters": {
+                      "query": [
+                        {
+                          "id": "DfjSYkQQP5",
+                          "name": "cursor",
+                          "required": true,
+                          "description": "",
+                          "example": "",
+                          "type": "string",
+                          "enable": true
+                        }
+                      ],
+                      "path": [
+                        {
+                          "id": "postId#0",
+                          "name": "postId",
+                          "required": true,
+                          "description": "",
+                          "type": "string",
+                          "enable": true,
+                          "example": "3"
+                        }
+                      ],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {},
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "28171668",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "next": {
+                              "type": "null"
+                            },
+                            "previous": {
+                              "type": "null"
+                            },
+                            "results": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "required": [
+                            "next",
+                            "previous",
+                            "results"
+                          ],
+                          "x-apidog-orders": [
+                            "next",
+                            "previous",
+                            "results"
+                          ]
+                        },
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "Success",
+                        "data": "{\r\n  \"next\": null,\r\n  \"previous\": null,\r\n  \"results\": [\r\n    {\r\n      \"id\": 27,\r\n      \"name\": \"Rodrigo Oliveira\",\r\n      \"username\": \"rodrigo_123\",\r\n      \"content\": \"this is a good comment @rodrigo_123\",\r\n      \"created_datetime\": \"2025-07-28T21:34:36.317264Z\",\r\n      \"mentions\": [\r\n        \"rodrigo_123\"\r\n      ]\r\n    },\r\n    {\r\n      \"id\": 26,\r\n      \"name\": \"Rodrigo Oliveira\",\r\n      \"username\": \"rodrigo_123\",\r\n      \"content\": \"this is a good comment @rodrigo_123\",\r\n      \"created_datetime\": \"2025-07-28T21:34:35.260028Z\",\r\n      \"mentions\": [\r\n        \"rodrigo_123\"\r\n      ]\r\n    },\r\n    {\r\n      \"id\": 25,\r\n      \"name\": \"Rodrigo Oliveira\",\r\n      \"username\": \"rodrigo_123\",\r\n      \"content\": \"this is a good comment @rodrigo_123\",\r\n      \"created_datetime\": \"2025-07-28T21:34:34.297644Z\",\r\n      \"mentions\": [\r\n        \"rodrigo_123\"\r\n      ]\r\n    },\r\n    {\r\n      \"id\": 24,\r\n      \"name\": \"Rodrigo Oliveira\",\r\n      \"username\": \"rodrigo_123\",\r\n      \"content\": \"this is a good comment @rodrigo_123\",\r\n      \"created_datetime\": \"2025-07-28T21:34:33.370942Z\",\r\n      \"mentions\": [\r\n        \"rodrigo_123\"\r\n      ]\r\n    },\r\n    {\r\n      \"id\": 23,\r\n      \"name\": \"Rodrigo Oliveira\",\r\n      \"username\": \"rodrigo_123\",\r\n      \"content\": \"this is a good comment @rodrigo_123\",\r\n      \"created_datetime\": \"2025-07-28T21:34:32.179269Z\",\r\n      \"mentions\": [\r\n        \"rodrigo_123\"\r\n      ]\r\n    },\r\n    {\r\n      \"id\": 22,\r\n      \"name\": \"Rodrigo Oliveira\",\r\n      \"username\": \"rodrigo_123\",\r\n      \"content\": \"this is a good comment @rodrigo_123\",\r\n      \"created_datetime\": \"2025-07-28T21:34:29.436872Z\",\r\n      \"mentions\": [\r\n        \"rodrigo_123\"\r\n      ]\r\n    }\r\n  ]\r\n}",
+                        "responseId": 28171668,
+                        "ordering": 1,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "mediaType": "",
+                      "examples": [],
+                      "oasExtensions": ""
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 26,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [
+                      "BLANK.28171668"
+                    ],
+                    "visibility": "INHERITED",
+                    "moduleId": 832020,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "Comment",
+                  "api": {
+                    "id": "19596197",
+                    "method": "get",
+                    "path": "/careers/{postId}/comments/{commentId}/",
+                    "parameters": {
+                      "path": [
+                        {
+                          "id": "postId#0",
+                          "name": "postId",
+                          "required": true,
+                          "description": "",
+                          "type": "string",
+                          "enable": true,
+                          "example": "3"
+                        },
+                        {
+                          "id": "commentId#0",
+                          "name": "commentId",
+                          "required": true,
+                          "description": "",
+                          "type": "string",
+                          "enable": true
+                        }
+                      ],
+                      "header": [
+                        {
+                          "required": false,
+                          "description": "",
+                          "type": "string",
+                          "id": "dLELwOsAVW",
+                          "example": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLQ2I5VjBNMVBFN2VUZVpXT3YxRVBtMWpGWkNfaFgyQ256YXhHNTNYS3N6WFRRWlE9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1ZCI6ImNvZGVsZWFwLWJhY2tlbmQtYzEyZGYiLCJhdXRoX3RpbWUiOjE3NTM2NjExOTgsInVzZXJfaWQiOiJFSUtDRGdVZ1dTWmVyZ2wxbFlZbnlyT2lvVFcyIiwic3ViIjoiRUlLQ0RnVWdXU1plcmdsMWxZWW55ck9pb1RXMiIsImlhdCI6MTc1MzY2MTE5OCwiZXhwIjoxNzUzNjY0Nzk4LCJlbWFpbCI6InJvZHJpZ28uc2lsdmEub2xpdmVpcmE5MzVAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTc2NDY0Mjk0Njk1ODc5ODc4NTUiXSwiZW1haWwiOlsicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTkzNUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.Kk1uQPlbjVxze_zmCsRfE8SNQptnIyq0C0rIee5BHeDUQ8_WrHj3UWOdIFoI8_aCMPEM9uW3gIv4rV7UBEyRhcHVHbdTIemr-k8YKvxVcKxhTLFfEwUIQMZ7m01laahyYuKfRNsl0VocAx2GOkZ4lUDav9T4DwCmgPz55HFeDoEZpL4uHyZTLTUJcRJCKVBIK03QoFbSKJsXOPmk0t7kRIEPqoqwylk7iRwJjMemVt4dN2W22hCnnjWktMxyEouQqzOQdIUGPtIK9fzAeGK5_iMNV4WtmfUOEr4wqjizwW_mnWgh1QwQWYsQmyRPPNyPccdStwZ_lJnLF6HexpAS2Q",
+                          "enable": true,
+                          "name": "Authorization"
+                        }
+                      ]
+                    },
+                    "auth": {},
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "28172360",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "username": {
+                              "type": "string"
+                            },
+                            "content": {
+                              "type": "string"
+                            },
+                            "created_datetime": {
+                              "type": "string"
+                            },
+                            "mentions": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "name",
+                            "username",
+                            "content",
+                            "created_datetime",
+                            "mentions"
+                          ],
+                          "x-apidog-orders": [
+                            "id",
+                            "name",
+                            "username",
+                            "content",
+                            "created_datetime",
+                            "mentions"
+                          ]
+                        },
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"id\": 27,\r\n    \"name\": \"Rodrigo Oliveira\",\r\n    \"username\": \"rodrigo_123\",\r\n    \"content\": \"this is a good comment @rodrigo_123\",\r\n    \"created_datetime\": \"2025-07-28T21:34:36.317264Z\",\r\n    \"mentions\": [\r\n        \"rodrigo_123\"\r\n    ]\r\n}",
+                        "responseId": 28172360,
+                        "ordering": 1,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "mediaType": "",
+                      "examples": [],
+                      "oasExtensions": ""
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 32,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [
+                      "BLANK.28172360"
+                    ],
+                    "visibility": "INHERITED",
+                    "moduleId": 832020,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "Comment",
+                  "api": {
+                    "id": "19595944",
+                    "method": "post",
+                    "path": "/careers/{postId}/comments/",
+                    "parameters": {
+                      "query": [],
+                      "path": [
+                        {
+                          "id": "postId#0",
+                          "name": "postId",
+                          "required": true,
+                          "description": "",
+                          "type": "string",
+                          "enable": true
+                        }
+                      ],
+                      "cookie": [],
+                      "header": [
+                        {
+                          "id": "78bUC0BTA6",
+                          "name": "Authorization",
+                          "required": true,
+                          "description": "",
+                          "example": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzY1NjM0MiwidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNjU2MzQyLCJleHAiOjE3NTM2NTk5NDIsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.E7c-9buFzOKBNTbN5hIg1wU6pVFM9jEO90WO01OV4fjdGtzShVr42yWlI4EYK5oyahYHWTpMVs54sZ8k-FfjAEB6Mp3VBoS3ooPcJsg7_N6QQyim5vc_zKrN0MHQnuDZNRyTkaC4aKVtRyvA9gXf0S8Jw7MpBT-x1qDrMs35_PkKeQOG0isposVAKYCQCqwHmOtwIMt5LaWewtpmH1mvBsHQst4NeMbr6YpxDhG-SXt1G1YY7UKNJyHNAwlh-P6g5BIhyfKEwPAHgkuvWt2ywK2T5GBXW_UoU4rbAhO8feqJkIozRMrxWyuvSpSG3-n_uHnItlVxKklNoYuJ15v5gg",
+                          "type": "string",
+                          "enable": true
+                        }
+                      ]
+                    },
+                    "auth": {},
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "28172342",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "username": {
+                              "type": "string"
+                            },
+                            "content": {
+                              "type": "string"
+                            },
+                            "created_datetime": {
+                              "type": "string"
+                            },
+                            "mentions": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "name",
+                            "username",
+                            "content",
+                            "created_datetime",
+                            "mentions"
+                          ],
+                          "x-apidog-orders": [
+                            "id",
+                            "name",
+                            "username",
+                            "content",
+                            "created_datetime",
+                            "mentions"
+                          ]
+                        },
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "id": "28236764",
+                        "code": 400,
+                        "name": "Bad Request",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "content": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "required": [
+                            "content"
+                          ],
+                          "x-apidog-orders": [
+                            "content"
+                          ]
+                        },
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "id": "28236765",
+                        "code": 403,
+                        "name": "Forbidden",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "detail": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "detail"
+                          ],
+                          "x-apidog-orders": [
+                            "detail"
+                          ]
+                        },
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"id\": 27,\r\n    \"name\": \"Rodrigo Oliveira\",\r\n    \"username\": \"rodrigo_123\",\r\n    \"content\": \"this is a good comment @rodrigo_123\",\r\n    \"created_datetime\": \"2025-07-28T21:34:36.317264Z\",\r\n    \"mentions\": [\r\n        \"rodrigo_123\"\r\n    ]\r\n}",
+                        "responseId": 28172342,
+                        "ordering": 1,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"content\": [\r\n        \"This field is required.\"\r\n    ]\r\n}",
+                        "responseId": 28236764,
+                        "ordering": 2,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"detail\": \"Authentication credentials were not provided.\"\r\n}",
+                        "responseId": 28236765,
+                        "ordering": 3,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "application/json",
+                      "parameters": [],
+                      "jsonSchema": {
+                        "type": "object",
+                        "properties": {
+                          "content": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "content"
+                        ],
+                        "x-apidog-orders": [
+                          "content"
+                        ]
+                      },
+                      "mediaType": "",
+                      "examples": [
+                        {
+                          "mediaType": "application/json",
+                          "value": "{\r\n    \"content\": \"this is a good comment @rodrigo_123\"\r\n}",
+                          "name": "Example 1"
+                        }
+                      ],
+                      "oasExtensions": ""
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 10,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [
+                      "BLANK.28172342",
+                      "BLANK.28236764",
+                      "BLANK.28236765"
+                    ],
+                    "visibility": "INHERITED",
+                    "moduleId": 832020,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "Comment",
+                  "api": {
+                    "id": "19596186",
+                    "method": "patch",
+                    "path": "/careers/{postId}/comments/{commentId}/",
+                    "parameters": {
+                      "query": [],
+                      "path": [
+                        {
+                          "id": "postId#0",
+                          "name": "postId",
+                          "required": true,
+                          "description": "",
+                          "type": "string",
+                          "enable": true,
+                          "example": "3"
+                        },
+                        {
+                          "id": "commentId#0",
+                          "name": "commentId",
+                          "required": true,
+                          "description": "",
+                          "type": "string",
+                          "enable": true,
+                          "example": "2"
+                        }
+                      ],
+                      "cookie": [],
+                      "header": [
+                        {
+                          "id": "78bUC0BTA6",
+                          "name": "Authorization",
+                          "required": true,
+                          "description": "",
+                          "example": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzY1NjM0MiwidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNjU2MzQyLCJleHAiOjE3NTM2NTk5NDIsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.E7c-9buFzOKBNTbN5hIg1wU6pVFM9jEO90WO01OV4fjdGtzShVr42yWlI4EYK5oyahYHWTpMVs54sZ8k-FfjAEB6Mp3VBoS3ooPcJsg7_N6QQyim5vc_zKrN0MHQnuDZNRyTkaC4aKVtRyvA9gXf0S8Jw7MpBT-x1qDrMs35_PkKeQOG0isposVAKYCQCqwHmOtwIMt5LaWewtpmH1mvBsHQst4NeMbr6YpxDhG-SXt1G1YY7UKNJyHNAwlh-P6g5BIhyfKEwPAHgkuvWt2ywK2T5GBXW_UoU4rbAhO8feqJkIozRMrxWyuvSpSG3-n_uHnItlVxKklNoYuJ15v5gg",
+                          "type": "string",
+                          "enable": true
+                        }
+                      ]
+                    },
+                    "auth": {},
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "28169577",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "username": {
+                              "type": "string"
+                            },
+                            "content": {
+                              "type": "string"
+                            },
+                            "created_datetime": {
+                              "type": "string"
+                            },
+                            "mentions": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "name",
+                            "username",
+                            "content",
+                            "created_datetime",
+                            "mentions"
+                          ],
+                          "x-apidog-orders": [
+                            "id",
+                            "name",
+                            "username",
+                            "content",
+                            "created_datetime",
+                            "mentions"
+                          ]
+                        },
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "id": "28235722",
+                        "code": 403,
+                        "name": "Forbidden",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "detail": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "detail"
+                          ],
+                          "x-apidog-orders": [
+                            "detail"
+                          ]
+                        },
+                        "description": "User trying to patch a comment from other user",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "id": "28235723",
+                        "code": 403,
+                        "name": "Forbidden",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "detail": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "detail"
+                          ],
+                          "x-apidog-orders": [
+                            "detail"
+                          ]
+                        },
+                        "description": "No athentication Bearer",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"id\": 27,\r\n    \"name\": \"Rodrigo Oliveira\",\r\n    \"username\": \"rodrigo_123\",\r\n    \"content\": \"this is a comment\",\r\n    \"created_datetime\": \"2025-07-28T21:34:36.317264Z\",\r\n    \"mentions\": []\r\n}",
+                        "responseId": 28169577,
+                        "ordering": 1,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"detail\": \"You do not have permission to perform this action.\"\r\n}",
+                        "responseId": 28235722,
+                        "ordering": 2,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"detail\": \"Authentication credentials were not provided.\"\r\n}",
+                        "responseId": 28235723,
+                        "ordering": 3,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "application/json",
+                      "parameters": [],
+                      "jsonSchema": {
+                        "type": "object",
+                        "properties": {
+                          "content": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "content"
+                        ],
+                        "x-apidog-orders": [
+                          "content"
+                        ]
+                      },
+                      "mediaType": "",
+                      "examples": [
+                        {
+                          "mediaType": "application/json",
+                          "value": "{\r\n    \"content\": \"this is a comment\"\r\n}",
+                          "name": "Example 1"
+                        }
+                      ],
+                      "oasExtensions": ""
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 16,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [
+                      "BLANK.28169577",
+                      "BLANK.28235722",
+                      "BLANK.28235723"
+                    ],
+                    "visibility": "INHERITED",
+                    "moduleId": 832020,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "Comment",
+                  "api": {
+                    "id": "19631060",
+                    "method": "delete",
+                    "path": "/careers/{postId}/comments/{commentId}/",
+                    "parameters": {
+                      "query": [],
+                      "path": [
+                        {
+                          "id": "postId#0",
+                          "name": "postId",
+                          "required": true,
+                          "description": "",
+                          "type": "string",
+                          "enable": true,
+                          "example": "3"
+                        },
+                        {
+                          "id": "commentId#0",
+                          "name": "commentId",
+                          "required": true,
+                          "description": "",
+                          "type": "string",
+                          "enable": true,
+                          "example": "2"
+                        }
+                      ],
+                      "cookie": [],
+                      "header": [
+                        {
+                          "id": "78bUC0BTA6",
+                          "name": "Authorization",
+                          "required": true,
+                          "description": "",
+                          "example": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzY1NjM0MiwidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNjU2MzQyLCJleHAiOjE3NTM2NTk5NDIsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.E7c-9buFzOKBNTbN5hIg1wU6pVFM9jEO90WO01OV4fjdGtzShVr42yWlI4EYK5oyahYHWTpMVs54sZ8k-FfjAEB6Mp3VBoS3ooPcJsg7_N6QQyim5vc_zKrN0MHQnuDZNRyTkaC4aKVtRyvA9gXf0S8Jw7MpBT-x1qDrMs35_PkKeQOG0isposVAKYCQCqwHmOtwIMt5LaWewtpmH1mvBsHQst4NeMbr6YpxDhG-SXt1G1YY7UKNJyHNAwlh-P6g5BIhyfKEwPAHgkuvWt2ywK2T5GBXW_UoU4rbAhO8feqJkIozRMrxWyuvSpSG3-n_uHnItlVxKklNoYuJ15v5gg",
+                          "type": "string",
+                          "enable": true
+                        }
+                      ]
+                    },
+                    "auth": {},
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "28236767",
+                        "code": 204,
+                        "name": "No Content",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {}
+                        },
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "id": "28237387",
+                        "code": 403,
+                        "name": "Forbidden",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "detail": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "detail"
+                          ],
+                          "x-apidog-orders": [
+                            "detail"
+                          ]
+                        },
+                        "description": "User trying to delete a comment from other user",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "id": "28237388",
+                        "code": 403,
+                        "name": "Forbidden",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "detail": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "detail"
+                          ],
+                          "x-apidog-orders": [
+                            "detail"
+                          ]
+                        },
+                        "description": "No athentication Bearer",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"detail\": \"You do not have permission to perform this action.\"\r\n}",
+                        "responseId": 28237387,
+                        "ordering": 2,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"detail\": \"Authentication credentials were not provided.\"\r\n}",
+                        "responseId": 28237388,
+                        "ordering": 3,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "application/json",
+                      "parameters": [],
+                      "jsonSchema": {
+                        "type": "object",
+                        "properties": {},
+                        "x-apidog-orders": []
+                      },
+                      "mediaType": "",
+                      "examples": [],
+                      "oasExtensions": ""
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 21,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [
+                      "BLANK.28236767",
+                      "BLANK.28237387",
+                      "BLANK.28237388"
+                    ],
+                    "visibility": "INHERITED",
+                    "moduleId": 832020,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Like",
+              "id": 4453688,
+              "auth": {},
+              "securityScheme": {},
+              "parentId": 4453684,
+              "serverId": "",
+              "description": "",
+              "identityPattern": {
+                "httpApi": {
+                  "type": "inherit",
+                  "bodyType": "",
+                  "fields": []
+                }
+              },
+              "shareSettings": {},
+              "visibility": "INHERITED",
+              "moduleId": 832020,
+              "preProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "postProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "inheritPostProcessors": {},
+              "inheritPreProcessors": {},
+              "items": [
+                {
+                  "name": "Like-a-post",
+                  "api": {
+                    "id": "19595865",
+                    "method": "post",
+                    "path": "/careers/{postId}/like/",
+                    "parameters": {
+                      "query": [],
+                      "path": [
+                        {
+                          "id": "postId#0",
+                          "name": "postId",
+                          "required": true,
+                          "description": "",
+                          "type": "string",
+                          "enable": true
+                        }
+                      ],
+                      "cookie": [],
+                      "header": [
+                        {
+                          "required": false,
+                          "description": "",
+                          "type": "string",
+                          "id": "yY4RYP2ACd",
+                          "example": "",
+                          "enable": true,
+                          "name": "Authorization"
+                        }
+                      ]
+                    },
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "28171646",
+                        "code": 201,
+                        "name": "Created",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {}
+                        },
+                        "description": "User gives a like in a post",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "id": "28235680",
+                        "code": 204,
+                        "name": "No Content",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {}
+                        },
+                        "description": "User removes a like in a post",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "id": "28236763",
+                        "code": 403,
+                        "name": "Forbidden",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "detail": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "detail"
+                          ],
+                          "x-apidog-orders": [
+                            "detail"
+                          ]
+                        },
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"detail\": \"Authentication credentials were not provided.\"\r\n}",
+                        "responseId": 28236763,
+                        "ordering": 1,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "mediaType": "",
+                      "examples": [],
+                      "oasExtensions": ""
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 10,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [
+                      "BLANK.28171646",
+                      "BLANK.28235680",
+                      "BLANK.28236763"
+                    ],
+                    "visibility": "INHERITED",
+                    "moduleId": 832020,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Profile",
+              "id": 4453791,
+              "auth": {},
+              "securityScheme": {},
+              "parentId": 4453684,
+              "serverId": "",
+              "description": "",
+              "identityPattern": {
+                "httpApi": {
+                  "type": "inherit",
+                  "bodyType": "",
+                  "fields": []
+                }
+              },
+              "shareSettings": {},
+              "visibility": "INHERITED",
+              "moduleId": 832020,
+              "preProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "postProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "inheritPostProcessors": {},
+              "inheritPreProcessors": {},
+              "items": [
+                {
+                  "name": "Profile",
+                  "api": {
+                    "id": "19596222",
+                    "method": "patch",
+                    "path": "/careers/profile/",
+                    "parameters": {
+                      "query": [],
+                      "path": [],
+                      "cookie": [],
+                      "header": [
+                        {
+                          "id": "csmE51At9e",
+                          "name": "Authorization",
+                          "required": true,
+                          "description": "",
+                          "example": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLQ2I5VjBNMVBFN2VUZVpXT3YxRVBtMWpGWkNfaFgyQ256YXhHNTNYS3N6WFRRWlE9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1ZCI6ImNvZGVsZWFwLWJhY2tlbmQtYzEyZGYiLCJhdXRoX3RpbWUiOjE3NTM2NjExOTgsInVzZXJfaWQiOiJFSUtDRGdVZ1dTWmVyZ2wxbFlZbnlyT2lvVFcyIiwic3ViIjoiRUlLQ0RnVWdXU1plcmdsMWxZWW55ck9pb1RXMiIsImlhdCI6MTc1MzY2MTE5OCwiZXhwIjoxNzUzNjY0Nzk4LCJlbWFpbCI6InJvZHJpZ28uc2lsdmEub2xpdmVpcmE5MzVAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTc2NDY0Mjk0Njk1ODc5ODc4NTUiXSwiZW1haWwiOlsicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTkzNUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.Kk1uQPlbjVxze_zmCsRfE8SNQptnIyq0C0rIee5BHeDUQ8_WrHj3UWOdIFoI8_aCMPEM9uW3gIv4rV7UBEyRhcHVHbdTIemr-k8YKvxVcKxhTLFfEwUIQMZ7m01laahyYuKfRNsl0VocAx2GOkZ4lUDav9T4DwCmgPz55HFeDoEZpL4uHyZTLTUJcRJCKVBIK03QoFbSKJsXOPmk0t7kRIEPqoqwylk7iRwJjMemVt4dN2W22hCnnjWktMxyEouQqzOQdIUGPtIK9fzAeGK5_iMNV4WtmfUOEr4wqjizwW_mnWgh1QwQWYsQmyRPPNyPccdStwZ_lJnLF6HexpAS2Q",
+                          "type": "string",
+                          "enable": true
+                        }
+                      ]
+                    },
+                    "auth": {},
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "28171670",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [
+                          {
+                            "required": false,
+                            "description": "",
+                            "id": "8jWbgPAxZ7",
+                            "example": "Bearer",
+                            "name": "Authorization",
+                            "type": "string"
+                          }
+                        ],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "app_username": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "name",
+                            "email",
+                            "app_username"
+                          ],
+                          "x-apidog-orders": [
+                            "name",
+                            "email",
+                            "app_username"
+                          ]
+                        },
+                        "description": "name and email get from firebase auth",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "id": "28235710",
+                        "code": 400,
+                        "name": "Bad Request",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "app_username": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              },
+                              "description": "app_username with \" \". Ex: \"user user\""
+                            },
+                            "01K19ETHKYGGXH4HPPJ83HM980": {
+                              "x-tmp-pending-properties": true
+                            }
+                          },
+                          "required": [
+                            "app_username",
+                            "01K19ETHKYGGXH4HPPJ83HM980"
+                          ],
+                          "x-apidog-orders": [
+                            "app_username",
+                            "01K19ETHKYGGXH4HPPJ83HM980"
+                          ]
+                        },
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "id": "28235774",
+                        "code": 403,
+                        "name": "Forbidden",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {
+                            "detail": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "detail"
+                          ],
+                          "x-apidog-orders": [
+                            "detail"
+                          ]
+                        },
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"name\": \"Rodrigo Oliveira\",\r\n    \"email\": \"rodrigo.silva.oliveira369@gmail.com\",\r\n    \"app_username\": \"rodrigo_123\"\r\n}",
+                        "responseId": 28171670,
+                        "ordering": 1,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"app_username\": [\r\n        \"O nome de usuário pode conter apenas letras, números e underscores (_).\"\r\n    ]\r\n}",
+                        "responseId": 28235710,
+                        "ordering": 2,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      },
+                      {
+                        "name": "Success",
+                        "data": "{\r\n    \"detail\": \"Authentication credentials were not provided.\"\r\n}",
+                        "responseId": 28235774,
+                        "ordering": 3,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "application/json",
+                      "parameters": [],
+                      "jsonSchema": {
+                        "type": "object",
+                        "properties": {
+                          "app_username": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "app_username"
+                        ],
+                        "x-apidog-orders": [
+                          "app_username"
+                        ]
+                      },
+                      "mediaType": "",
+                      "examples": [
+                        {
+                          "mediaType": "application/json",
+                          "value": "{\r\n    \"app_username\": \"rodrigo_123\"\r\n}",
+                          "name": "Example 1"
+                        }
+                      ],
+                      "oasExtensions": ""
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 10,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [
+                      "BLANK.28171670",
+                      "BLANK.28235710",
+                      "BLANK.28235774"
+                    ],
+                    "visibility": "INHERITED",
+                    "moduleId": 832020,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Posts",
+              "api": {
+                "id": "19595617",
+                "method": "get",
+                "path": "/careers/",
+                "parameters": {
+                  "query": [
+                    {
+                      "id": "pLGQF4QsaS",
+                      "name": "author",
+                      "required": true,
+                      "description": "filters posts from a author with id",
+                      "example": "",
+                      "type": "integer",
+                      "schema": {
+                        "type": "integer"
+                      },
+                      "enable": true,
+                      "fixedValue": false
+                    },
+                    {
+                      "id": "NMaRgKGrra",
+                      "name": "cursor",
+                      "required": true,
+                      "description": "comes from pagination on the bopdy of the response (next and previous)",
+                      "example": "",
+                      "type": "string",
+                      "enable": true,
+                      "fixedValue": false
+                    },
+                    {
+                      "id": "pWclxF8OTt",
+                      "name": "ordering",
+                      "required": true,
+                      "description": "filter ordering (-comments_count, comments_count, -likes_count, likes_count, created_datetime, -created_datetime)",
+                      "example": "-comments_count",
+                      "type": "string",
+                      "enable": true,
+                      "fixedValue": false
+                    }
+                  ],
+                  "path": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "28170130",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "next": null,
+                      "previous": null,
+                      "results": [],
+                      "type": "string"
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "Example 1",
+                    "data": "{\r\n    \"next\": \"http://localhost:8000/careers/?author=&cursor=cD0yMDI1LTA3LTI4KzAxJTNBMzglM0E1NC4wNTYzNTklMkIwMCUzQTAw&ordering=\",\r\n    \"previous\": \"http://localhost:8000/careers/?author=&cursor=cD0yMDI1LTA3LTI4KzAxJTNBMzglM0E1NC4wNTYzNTklMkIwMCUzQTAw&ordering=\",\r\n    \"results\": []\r\n}",
+                    "responseId": 28170130,
+                    "ordering": 1,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 10,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.28170130"
+                ],
+                "visibility": "INHERITED",
+                "moduleId": 832020,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Post",
+              "api": {
+                "id": "19596191",
+                "method": "get",
+                "path": "/careers/{postId}/",
+                "parameters": {
+                  "query": [
+                    {
+                      "id": "GfvXmznHrE",
+                      "name": "author",
+                      "required": true,
+                      "description": "filters posts from a author with id",
+                      "type": "string",
+                      "enable": true
+                    },
+                    {
+                      "id": "xBz2vC6MSQ",
+                      "name": "cursor",
+                      "required": true,
+                      "description": "comes from pagination on the bopdy of the response (next and previous)",
+                      "type": "string",
+                      "enable": true
+                    },
+                    {
+                      "id": "xURs6vtQ3w",
+                      "name": "ordering",
+                      "required": true,
+                      "description": "filter ordering ( created_datetime, -created_datetime)",
+                      "type": "string",
+                      "enable": true
+                    }
+                  ],
+                  "path": [
+                    {
+                      "id": "postId#0",
+                      "name": "postId",
+                      "required": true,
+                      "description": "Id from the Post",
+                      "type": "integer",
+                      "enable": true,
+                      "example": "3"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "28170077",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "username": {
+                          "type": "string"
+                        },
+                        "created_datetime": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "content": {
+                          "type": "string"
+                        },
+                        "comments_count": {
+                          "type": "integer"
+                        },
+                        "likes_count": {
+                          "type": "integer"
+                        },
+                        "mentions": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "name",
+                        "username",
+                        "created_datetime",
+                        "title",
+                        "content",
+                        "comments_count",
+                        "likes_count",
+                        "mentions"
+                      ],
+                      "title": "aqui tem um teste",
+                      "x-apidog-orders": [
+                        "id",
+                        "name",
+                        "username",
+                        "created_datetime",
+                        "title",
+                        "content",
+                        "comments_count",
+                        "likes_count",
+                        "mentions"
+                      ]
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "Success",
+                    "data": "{\r\n    \"id\": 35,\r\n    \"name\": \"Rodrigo Oliveira\",\r\n    \"username\": \"Rodrigo_123654\",\r\n    \"created_datetime\": \"2025-07-28T21:18:29.529791Z\",\r\n    \"title\": \"titulo\",\r\n    \"content\": \"Mention to @Rodrigo_123654\",\r\n    \"comments_count\": 0,\r\n    \"likes_count\": 0,\r\n    \"mentions\": [\r\n        \"Rodrigo_123654\"\r\n    ]\r\n}",
+                    "responseId": 28170077,
+                    "ordering": 1,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 15,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.28170077"
+                ],
+                "visibility": "INHERITED",
+                "moduleId": 832020,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Post",
+              "api": {
+                "id": "19595631",
+                "method": "post",
+                "path": "/careers/",
+                "parameters": {
+                  "header": [
+                    {
+                      "required": false,
+                      "description": "Obteined from the basic front end",
+                      "type": "string",
+                      "id": "UkNkaQr5dn",
+                      "example": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzY1MjQ1MywidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNjUyNDUzLCJleHAiOjE3NTM2NTYwNTMsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.E9E-r4DaQam2f4b_PhW7VHZB-cHnS-_GnXZywCsuhPiGuGwXORXorMjjl6YuZf0uHIP1Ou34F08fzmZ5ozpuCmLMVGwgCjUB7ZQC4PIWwCdmFDG-ynTyIc0JE3yYWJD925vCHkDb7T4ElUIzNQP3mzS8ceFMHLpkwri09Fq1hmTQ1YSwG7NAgM8kN17hsKJnSflypqT5dUvhUU2kiy3HQysz1HVos0QKjijQIyNz3py4EpSA-fzrcKmZ6NA_-MhMkc2vFtmcNVeNREnapF51ba_kFPMA5XARSvjSzYwFF2D898V94pJ6DFQF2VYL5rlwTo4DwLc2XM6vEum_9dAXeQ",
+                      "enable": true,
+                      "name": "Authorization"
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "28170132",
+                    "code": 201,
+                    "name": "Created",
+                    "headers": [
+                      {
+                        "required": false,
+                        "description": "",
+                        "id": "uCcy1fLCc8",
+                        "example": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzczNjA2OCwidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNzM2MDY4LCJleHAiOjE3NTM3Mzk2NjgsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.Z3K6q4IoDfEk-k17kQsKcLmKQ9SW8uQcrauF5yHIfro28VzZ7lKxnytvCb2MeoKMZVO31yYAZ8AXY5QAuDMXgRebXeB67ROs7pjgpgcO8bwOHrGPpexuCiQGgAq5qlCfxPp-m5dAG4FNzRDcvwTlh-hBLIhDDI0GPDdUP_ozcZHXumULOukBexJ04hYaM-yjG8q1xwLdNSE8TAzz7j9clC1nRXoCKmyWExrb90b1cn8Cr2axxg9D_gYzS5v6ZqvPiI8moCD4d1G12wNdn95HY4uqQX68PO2I32FCRRgLelibFAyjC5zCJSMya7OSIJTVuLgLmPS6NNYNrlqkkwQOwg",
+                        "name": "Authorization",
+                        "type": "string"
+                      }
+                    ],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "username": {
+                          "type": "string"
+                        },
+                        "created_datetime": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "content": {
+                          "type": "string"
+                        },
+                        "comments_count": {
+                          "type": "integer"
+                        },
+                        "likes_count": {
+                          "type": "integer"
+                        },
+                        "mentions": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "name",
+                        "username",
+                        "created_datetime",
+                        "title",
+                        "content",
+                        "comments_count",
+                        "likes_count",
+                        "mentions"
+                      ],
+                      "x-apidog-orders": [
+                        "id",
+                        "name",
+                        "username",
+                        "created_datetime",
+                        "title",
+                        "content",
+                        "comments_count",
+                        "likes_count",
+                        "mentions"
+                      ]
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "id": "28236748",
+                    "code": 403,
+                    "name": "Forbidden",
+                    "headers": [
+                      {
+                        "required": false,
+                        "description": "No Bearer value",
+                        "id": "PPJ4Sy26Yz",
+                        "example": "",
+                        "name": "Authorization",
+                        "type": "string"
+                      }
+                    ],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "detail": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "detail"
+                      ],
+                      "x-apidog-orders": [
+                        "detail"
+                      ]
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "Success",
+                    "data": "{\r\n    \"id\": 33,\r\n    \"name\": \"Rodrigo Oliveira\",\r\n    \"username\": \"Rodrigo_123654\",\r\n    \"created_datetime\": \"2025-07-28T21:01:00.020559Z\",\r\n    \"title\": \"titulo\",\r\n    \"content\": \"Mention to @Rodrigo_123654\",\r\n    \"comments_count\": 0,\r\n    \"likes_count\": 0,\r\n    \"mentions\": [\r\n        \"Rodrigo_123654\"\r\n    ]\r\n}",
+                    "responseId": 28170132,
+                    "ordering": 1,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "Success",
+                    "data": "{\r\n    \"detail\": \"Authentication credentials were not provided.\"\r\n}",
+                    "responseId": 28236748,
+                    "ordering": 2,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "title",
+                      "content"
+                    ],
+                    "title": "Rodrigo",
+                    "x-apidog-orders": [
+                      "title",
+                      "content"
+                    ]
+                  },
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\r\n    \"title\": \"test\",\r\n    \"content\": \"Mention to @Rodrigo_123654\"\r\n}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 20,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.28170132",
+                  "BLANK.28236748"
+                ],
+                "visibility": "INHERITED",
+                "moduleId": 832020,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Post",
+              "api": {
+                "id": "19595744",
+                "method": "patch",
+                "path": "/careers/{postID}/",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "postID#0",
+                      "name": "postID",
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "enable": true,
+                      "example": "1"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "hppEySakaJ",
+                      "example": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzczNjA2OCwidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNzM2MDY4LCJleHAiOjE3NTM3Mzk2NjgsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.Z3K6q4IoDfEk-k17kQsKcLmKQ9SW8uQcrauF5yHIfro28VzZ7lKxnytvCb2MeoKMZVO31yYAZ8AXY5QAuDMXgRebXeB67ROs7pjgpgcO8bwOHrGPpexuCiQGgAq5qlCfxPp-m5dAG4FNzRDcvwTlh-hBLIhDDI0GPDdUP_ozcZHXumULOukBexJ04hYaM-yjG8q1xwLdNSE8TAzz7j9clC1nRXoCKmyWExrb90b1cn8Cr2axxg9D_gYzS5v6ZqvPiI8moCD4d1G12wNdn95HY4uqQX68PO2I32FCRRgLelibFAyjC5zCJSMya7OSIJTVuLgLmPS6NNYNrlqkkwQOwg",
+                      "enable": true,
+                      "name": "Authorization"
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "28169573",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "username": {
+                          "type": "string"
+                        },
+                        "created_datetime": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "content": {
+                          "type": "string"
+                        },
+                        "comments_count": {
+                          "type": "integer"
+                        },
+                        "likes_count": {
+                          "type": "integer"
+                        },
+                        "mentions": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "name",
+                        "username",
+                        "created_datetime",
+                        "title",
+                        "content",
+                        "comments_count",
+                        "likes_count",
+                        "mentions"
+                      ],
+                      "x-apidog-orders": [
+                        "id",
+                        "name",
+                        "username",
+                        "created_datetime",
+                        "title",
+                        "content",
+                        "comments_count",
+                        "likes_count",
+                        "mentions"
+                      ]
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "id": "28236750",
+                    "code": 403,
+                    "name": "Forbidden",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "detail": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "detail"
+                      ],
+                      "x-apidog-orders": [
+                        "detail"
+                      ]
+                    },
+                    "description": "Different user trying to patch posts from others",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "Success",
+                    "data": "{\r\n    \"id\": 33,\r\n    \"name\": \"Rodrigo Oliveira\",\r\n    \"username\": \"Rodrigo_123654\",\r\n    \"created_datetime\": \"2025-07-28T21:01:00.020559Z\",\r\n    \"title\": \"test update\",\r\n    \"content\": \"contente update no mention\",\r\n    \"comments_count\": 0,\r\n    \"likes_count\": 0,\r\n    \"mentions\": []\r\n}",
+                    "responseId": 28169573,
+                    "ordering": 1,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "Success",
+                    "data": "{\r\n    \"detail\": \"You do not have permission to perform this action.\"\r\n}",
+                    "responseId": 28236750,
+                    "ordering": 2,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "title",
+                      "content"
+                    ],
+                    "x-apidog-orders": [
+                      "title",
+                      "content"
+                    ]
+                  },
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\r\n    \"title\": \"test update\",\r\n    \"content\": \"contente update no mention\"\r\n}",
+                      "name": "Example 1"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 30,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.28169573",
+                  "BLANK.28236750"
+                ],
+                "visibility": "INHERITED",
+                "moduleId": 832020,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Post",
+              "api": {
+                "id": "19630905",
+                "method": "delete",
+                "path": "/careers/{postID}/",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "postID#0",
+                      "name": "postID",
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "enable": true,
+                      "example": "1"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "hppEySakaJ",
+                      "example": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTQwZjA0ODgxYzZhMDE2MTFlYjI4NGE0Yzk1YTI1MWU5MTEyNTAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUm9kcmlnbyBPbGl2ZWlyYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLZjM5ZWJIOWRhZHJ2MU5IZGlQTTdjZGo3Qlh2UHk5TXJKZ3dzZnhxNk1PcDh2WUR2Wj1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jb2RlbGVhcC1iYWNrZW5kLWMxMmRmIiwiYXVkIjoiY29kZWxlYXAtYmFja2VuZC1jMTJkZiIsImF1dGhfdGltZSI6MTc1MzczNjA2OCwidXNlcl9pZCI6InRBZFEyb2o4VllOV05LWlp0YmIyVEQzWVU1cTEiLCJzdWIiOiJ0QWRRMm9qOFZZTldOS1padGJiMlREM1lVNXExIiwiaWF0IjoxNzUzNzM2MDY4LCJleHAiOjE3NTM3Mzk2NjgsImVtYWlsIjoicm9kcmlnby5zaWx2YS5vbGl2ZWlyYTM2OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMTMyNTk2MzQ4NDA3MTQyMTUyMSJdLCJlbWFpbCI6WyJyb2RyaWdvLnNpbHZhLm9saXZlaXJhMzY5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.Z3K6q4IoDfEk-k17kQsKcLmKQ9SW8uQcrauF5yHIfro28VzZ7lKxnytvCb2MeoKMZVO31yYAZ8AXY5QAuDMXgRebXeB67ROs7pjgpgcO8bwOHrGPpexuCiQGgAq5qlCfxPp-m5dAG4FNzRDcvwTlh-hBLIhDDI0GPDdUP_ozcZHXumULOukBexJ04hYaM-yjG8q1xwLdNSE8TAzz7j9clC1nRXoCKmyWExrb90b1cn8Cr2axxg9D_gYzS5v6ZqvPiI8moCD4d1G12wNdn95HY4uqQX68PO2I32FCRRgLelibFAyjC5zCJSMya7OSIJTVuLgLmPS6NNYNrlqkkwQOwg",
+                      "enable": true,
+                      "name": "Authorization"
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "28235709",
+                    "code": 204,
+                    "name": "No Content",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "id": "28236752",
+                    "code": 403,
+                    "name": "Forbidden",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "detail": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "detail"
+                      ],
+                      "x-apidog-orders": [
+                        "detail"
+                      ]
+                    },
+                    "description": "Different user trying to delete posts from others",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "Success",
+                    "data": "{\r\n    \"detail\": \"You do not have permission to perform this action.\"\r\n}",
+                    "responseId": 28236752,
+                    "ordering": 2,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {},
+                    "x-apidog-orders": []
+                  },
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 36,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.28235709",
+                  "BLANK.28236752"
+                ],
+                "visibility": "INHERITED",
+                "moduleId": 832020,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "socketCollection": [],
+  "docCollection": [],
+  "webSocketCollection": [],
+  "socketIOCollection": [],
+  "responseCollection": [
+    {
+      "_databaseId": 1059394,
+      "updatedAt": "2025-07-27T21:25:33.000Z",
+      "name": "Root",
+      "type": "root",
+      "children": [],
+      "moduleId": 832020,
+      "parentId": 0,
+      "id": 1059394,
+      "ordering": [],
+      "items": []
+    }
+  ],
+  "schemaCollection": [
+    {
+      "id": 2366225,
+      "name": "Root",
+      "visibility": "SHARED",
+      "moduleId": 832020,
+      "items": [],
+      "ordering": []
+    }
+  ],
+  "securitySchemeCollection": [
+    {
+      "id": 658792,
+      "name": "Root",
+      "items": [],
+      "ordering": []
+    }
+  ],
+  "requestCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "ordering": [
+        "requestFolder.6686815"
+      ],
+      "items": []
+    }
+  ],
+  "apiTestCaseCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "items": []
+    }
+  ],
+  "testCaseReferences": [],
+  "environments": [],
+  "commonScripts": [],
+  "databaseConnections": [],
+  "globalVariables": [],
+  "moduleVariables": [
+    {
+      "id": "832020",
+      "variables": []
+    }
+  ],
+  "commonParameters": null,
+  "projectSetting": {
+    "id": "1017658",
+    "auth": {},
+    "securityScheme": {},
+    "gateway": [],
+    "language": "en-US",
+    "apiStatuses": [
+      "developing",
+      "testing",
+      "released",
+      "deprecated"
+    ],
+    "mockSettings": {},
+    "preProcessors": [],
+    "postProcessors": [],
+    "advancedSettings": {
+      "enableJsonc": false,
+      "enableBigint": false,
+      "responseValidate": true,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "isDefaultUrlEncoding": 3,
+      "publishedDocUrlRules": {
+        "defaultRule": "SLUGIFY_WITH_RESOURCE_KEY",
+        "resourceKeyStandard": "NEW"
+      }
+    },
+    "initialDisabledMockIds": [],
+    "servers": [
+      {
+        "id": "default",
+        "name": "Default Server"
+      }
+    ],
+    "cloudMock": {
+      "security": "free",
+      "enable": false,
+      "tokenKey": "apidogToken"
+    }
+  },
+  "customFunctions": [],
+  "projectAssociations": []
+}
